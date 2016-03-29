@@ -1,5 +1,5 @@
 {
-  "name": "Dragooon/gci-php-sdk",
+  "name": "dragooon/gci-php-sdk",
   "description": "Google Code-in Task API SDK",
   "keywords": ["google", "code-in", "api", "sdk"],
   "license": "MIT",
