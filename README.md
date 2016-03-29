@@ -21,7 +21,8 @@ foreach ($taskList as $task) {
 $nextPage = $taskList->getNextPage();
 
 // Get the details of a single task
-$task = $client->getTask(<id>);
+$id = 123; // Task ID
+$task = $client->getTask($id);
 echo $task->getDescription();
 
 // Create a new task
