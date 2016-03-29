@@ -1,10 +1,21 @@
 {
-    "autoload": {
-        "psr-4": {
-            "Dragooon\\GCI\\": "src/"
-        }
-    },
-    "require": {
-        "guzzlehttp/guzzle": "^6.2"
+  "name": "Dragooon/gci-php-sdk",
+  "description": "Google Code-in Task API SDK",
+  "keywords": ["google", "code-in", "api", "sdk"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Shitiz Garg",
+      "email": "mail@dragooon.net",
+      "homepage": "http://dragooon.net"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dragooon\\GCI\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^6.2"
+  }
 }
