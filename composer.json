@@ -1,6 +1,6 @@
 {
-    "name": "dragooon/gci-php",
-    "description": "Google Code-in Task API SDK",
+    "name": "droogle/gci-php",
+    "description": "Google Code-in API Task Management",
     "keywords": ["google", "code-in", "api", "sdk"],
     "license": "MIT",
     "authors": [
