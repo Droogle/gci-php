@@ -5,15 +5,15 @@ task definition
 
 Installation
 ------
-Library can be installed from composer using ```composer require dragooon/gci-php-sdk``` or adding
-```dragooon/gci-php-sdk``` to your composer dependencies
+Library can be installed from composer using ```composer require droogle/gci-php``` or adding
+```droogle/gci-php``` to your composer dependencies
 
 Example
 ------
 This is a simplified example of handling tasks via the API
 
 ```php
-$client = new Dragooon\GCI\Client('<api key>');
+$client = new Droogle\GCI\Client('<api key>');
 $taskList = $client->getTasks(2); // Get tasks from second page
 foreach ($taskList as $task) {
     echo $task->getId() . ' ' . $task->getName(); // See src/TaskInterface.php for full function list
@@ -26,10 +26,11 @@ $task = $client->getTask($id);
 echo $task->getDescription();
 
 // Create a new task
-$task = new Task([
+$task = new Droogle\GCI\Task([
     'name' => 'Test task',
-    'description' => 'Testing a new task',
-    'status' => Dragooon\GCI\TaskInterface::STATUS_DRAFTED,
+    'description' => 'Adding a new task',
+    'status' => Droogle\GCI\TaskInterface::STATUS_DRAFTED,
+    ...
 ]);
 $client->createTask($task);
 ```
