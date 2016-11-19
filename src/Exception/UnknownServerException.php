@@ -1,7 +1,5 @@
 <?php
 
-namespace Dragooon\GCI\Exception;
+namespace Droogle\GCI\Exception;
 
-class UnknownServerException extends \Exception
-{
-}
+class UnknownServerException extends \Exception {}

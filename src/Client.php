@@ -1,11 +1,12 @@
 <?php
 
-namespace Dragooon\GCI;
+namespace Droogle\GCI;
 
-use Dragooon\GCI\Exception\MissingApiTokenException;
-use Dragooon\GCI\Exception\NotFoundException;
-use Dragooon\GCI\Exception\RequestFailedException;
-use Dragooon\GCI\Exception\UnknownServerException;
+use Droogle\GCI\Exception\BadRequestException;
+use Droogle\GCI\Exception\MissingApiTokenException;
+use Droogle\GCI\Exception\NotFoundException;
+use Droogle\GCI\Exception\RequestFailedException;
+use Droogle\GCI\Exception\UnknownServerException;
 use GuzzleHttp\Handler\CurlHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Client as GuzzleHttpClient;
@@ -150,7 +151,7 @@ class Client
      * @throws MissingApiTokenException
      * @throws NotFoundException
      * @throws RequestFailedException
-     * @throws UnknownServerException
+     * @throws BadRequestException
      */
     protected function request($endpoint, $method = 'GET', $queryParams = [], $body = '')
     {
@@ -169,7 +170,7 @@ class Client
             return true;
         }
         elseif ($statusCode == 400) {
-            throw new UnknownServerException();
+            throw new BadRequestException();
         }
         elseif ($statusCode == 401) {
             throw new MissingApiTokenException();
@@ -192,7 +193,7 @@ class Client
         $headerMiddleware = function (RequestInterface $request) {
             return $request
                 ->withHeader('Authorization', 'Bearer ' . $this->getApiKey())
-                ->withHeader('Content-type', 'text/json');
+                ->withHeader('Content-type', 'application/json');
         };
         $headerMiddleware->bindTo($this);
 

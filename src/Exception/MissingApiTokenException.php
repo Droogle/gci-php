@@ -1,7 +1,5 @@
 <?php
 
-namespace Dragooon\GCI\Exception;
+namespace Droogle\GCI\Exception;
 
-class MissingApiTokenException extends \Exception
-{
-}
+class MissingApiTokenException extends \Exception {}

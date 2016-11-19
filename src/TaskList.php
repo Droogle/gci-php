@@ -1,6 +1,6 @@
 <?php
 
-namespace Dragooon\GCI;
+namespace Droogle\GCI;
 
 class TaskList implements \IteratorAggregate, \ArrayAccess
 {
