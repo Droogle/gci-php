@@ -1,7 +1,12 @@
 Google Code-in API SDK for PHP
 ===========================
 This API can be used to access [Google Code-in](http://codein.withgoogle.com)'s Task API to request, update and modify
-task definition
+task definition.
+
+Drupal
+------
+This tool is maintained by the Drupal community. 
+Special credit goes to [Shitiz Garg](https://github.com/Dragooon) who created this SDK.
 
 Installation
 ------

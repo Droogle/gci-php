@@ -193,6 +193,7 @@ class Client {
       return TRUE;
     }
     elseif ($statusCode == 400) {
+      echo $response->getBody();
       throw new BadRequestException();
     }
     elseif ($statusCode == 401) {
