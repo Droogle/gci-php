@@ -1,6 +1,8 @@
 <?php
 
-namespace Droogle\GCI;
+namespace Droogle\Gci\Task\TaskFactoryInterface;
+
+use Droogle\Gci\Task\TaskInterface;
 
 /**
  * Interface for Task Factor.

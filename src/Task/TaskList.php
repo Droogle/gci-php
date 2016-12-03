@@ -1,6 +1,8 @@
 <?php
 
-namespace Droogle\GCI;
+namespace Droogle\Gci\Task;
+
+use Droogle\Gci\Client;
 
 /**
  * List the tasks.

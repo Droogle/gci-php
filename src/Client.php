@@ -1,11 +1,15 @@
 <?php
 
-namespace Droogle\GCI;
+namespace Droogle\Gci;
 
-use Droogle\GCI\Exception\BadRequestException;
-use Droogle\GCI\Exception\MissingApiTokenException;
-use Droogle\GCI\Exception\NotFoundException;
-use Droogle\GCI\Exception\RequestFailedException;
+use Droogle\Gci\Exception\BadRequestException;
+use Droogle\Gci\Exception\MissingApiTokenException;
+use Droogle\Gci\Exception\NotFoundException;
+use Droogle\Gci\Exception\RequestFailedException;
+use Droogle\Gci\Task\TaskFactoryInterface\TaskFactoryInterface;
+use Droogle\Gci\Task\TaskInterface;
+use Droogle\Gci\Task\TaskList;
+use Droogle\Gci\TaskFactory\TaskFactory;
 use GuzzleHttp\Handler\CurlHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Client as GuzzleHttpClient;
@@ -28,7 +32,7 @@ class Client {
    *
    * @param string $apiKey
    *   The API Key for the org admin.
-   * @param \Droogle\GCI\TaskFactoryInterface $taskFactory
+   * @param TaskFactoryInterface $taskFactory
    *   A TaskFactory object.
    */
   public function __construct($apiKey, TaskFactoryInterface $taskFactory = NULL) {
@@ -65,7 +69,7 @@ class Client {
       $tasks[] = $this->taskFactory->getTask($task);
     }
 
-    return new TasKList($tasks, (int) $response['count'], $page, $this);
+    return new TaskList($tasks, (int) $response['count'], $page, $this);
   }
 
   /**

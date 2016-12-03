@@ -1,6 +1,6 @@
 <?php
 
-namespace Droogle\GCI\Exception;
+namespace Droogle\Gci\Exception;
 
 /**
  * Not Found Exception Class.
