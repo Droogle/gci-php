@@ -1,6 +1,6 @@
 <?php
 
-namespace Droogle\Gci\TaskFactory;
+namespace Droogle\Gci\Task;
 
 /**
  * Task object factory.

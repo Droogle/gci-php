@@ -9,7 +9,7 @@ use Droogle\Gci\Exception\RequestFailedException;
 use Droogle\Gci\Task\TaskFactoryInterface\TaskFactoryInterface;
 use Droogle\Gci\Task\TaskInterface;
 use Droogle\Gci\Task\TaskList;
-use Droogle\Gci\TaskFactory\TaskFactory;
+use Droogle\Gci\Task\TaskFactory;
 use GuzzleHttp\Handler\CurlHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Client as GuzzleHttpClient;

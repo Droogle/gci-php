@@ -1,6 +1,6 @@
 <?php
 
-namespace Droogle\Gci\Task\TaskFactoryInterface;
+namespace Droogle\Gci\Task;
 
 use Droogle\Gci\Task\TaskInterface;
 
